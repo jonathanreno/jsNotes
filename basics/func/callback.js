@@ -1,9 +1,6 @@
-const add = (a, b) => {
-  return a + b
+const hiccup = () => {
+  console.log("hcUUP!")
 }
 
-const mul = (add, () => {
-  return add * 10
-})
+setTimeout(hiccup, 2000);
 
-console.log(mul(5,3))
