@@ -49,6 +49,16 @@ const books = [
 ]
 
 
-findPaul = books.filter(p => p.author === "paul")
+const findPaul = books.filter(p => p.author === "paul")
 
-console.table(findPaul)
+console.log(findPaul)
+
+
+const highRatings = books.filter(r => r.rating > 4)
+
+console.log(highRatings)
+
+
+const containsTim = books.filter(t => t.title.includes('Tim'))
+
+console.log(containsTim)
