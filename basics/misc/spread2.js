@@ -37,3 +37,20 @@ console.log(weaponCopy)
 const carCopy = [...cars]
 
 console.log(carCopy)
+
+
+
+
+// can insert other types and other data into the spread array
+const moreAnimals = ['elephant', 'gorrila', ...animals]
+
+console.log(moreAnimals)
+
+
+
+// Strings are iterables. You can split strings into an array literal with the spread operator
+
+const myName = [...'jonathan']
+
+console.log(myName)
+
