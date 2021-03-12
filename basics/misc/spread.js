@@ -1,45 +1,13 @@
-/**
- * Spread operator allows an iterable to be expanded in places where zero or more arguments (for function calls)
- * or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-val pairs (for obj literals) are expected
- * */
+// spread in function calls
 
-// spread for function calls allows an iterable to go into an arguments field for functions/methods that dont allow iterables
+// spreading for function calls breaks up an iterable into single elements as arguments rather than the iterable being only one argument in itself.
 
+// This is helpful for methods that do not accept iterables as parameters
 
+const nums = [3, 67, 8, 56, 23]
 
-const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(Math.max(...nums)) 
+console.log(Math.min(...nums))
 
-const isMax = () => Math.max(...nums)
+// console.log(Math.max(nums)) --> NaN
 
-console.log(isMax())
-
-
-const isMin = () => Math.min(...nums)
-
-console.log(isMin())
-
-
-
-
-//////////ANOTHER EXAMPLE
-
-const colorsArray = ['red', 'blue', 'purple', 'yellow']
-
-const colors = (a, b, c, d) => {
-    console.log(`a: ${a}\nb: ${b}\nc: ${c}\nd: ${d}`)
-}
-
-colors(...colorsArray)
-
-
-
-
-//////////ANOTHER EXAMPLE
-
-const word = 'four'
-
-const spellWord = (a, b, c, d) => {
-    console.log(`a: ${a}\nb: ${b}\nc: ${c}\nd: ${d}`)
-}
-
-spellWord(...word)

@@ -1,17 +1,12 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// The every() array method returns true or false
+// it tests whether ALL elements in the array pass the provided function
 
 
-const words = ['dog', 'cat','log', 'pog', 'wog']
+const names = ['jonathan', 'amy', 'ethan', 'aislynn', 'shiloh', 'jameson']
 
-const words2 = ['hello', 'goodbye', 'salude']
+const isThreeLen = names.every(n => n.length === 3)
 
-
-const hasThree = words.every(word => word.length === 3)
-
-console.log(hasThree)
+console.log(isThreeLen)
 
 
-const has2 = words2.every(w => w.length === 2)
-
-console.log(has2)
-
+const isStr = names.every(s => typeof(s) = string )
