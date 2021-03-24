@@ -1,3 +1,5 @@
+// the 'this' keyword ALSO depends on the INVOCATION CONTEXT
+
 // there is a particular quirk with the 'this' keyword
 // here is an example
 
@@ -58,7 +60,7 @@ const myObj3 = {
   },
 };
 
-const printAll = myObj3.printAll();
+const printAll = myObj3.printAll;
 printAll(); // output = TypeError: printAll is not a function
 
 /*
