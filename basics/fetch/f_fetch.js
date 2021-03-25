@@ -8,9 +8,10 @@ const fetch = require("node-fetch");
 
 const makeRequest = fetch("http://swapi.dev/api/films/1/")
   .then((response) => {
+    // check response status
     if (!response.ok) {
       console.log("ERROR");
-
+    } else {
       response.json().then((data) => {
         for (char of data.characters) {
           console.log(char);
@@ -19,5 +20,5 @@ const makeRequest = fetch("http://swapi.dev/api/films/1/")
     }
   })
   .catch((err) => {
-    console.log("err");
+    console.log(err);
   });
